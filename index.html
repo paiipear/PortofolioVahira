@@ -2,13 +2,12 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Vahira Nurfitria</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="src/index.css">
-  
+    <link rel="stylesheet" href="/src/index.css">
 </head>
-<body class="selection-accent overflow-x-hidden">
+<body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="max-w-7xl px-6 nav-container">
@@ -23,7 +22,7 @@
                 <a href="#contact">KONTAK</a>
             </div>
             <button id="openLogin" class="btn-login">
-                <i class="fas fa-sign-in-alt" style="font-size: 12px;"></i> Masuk
+                <i class="fas fa-sign-in-alt" style="font-size: 12px;"></i> <span class="btn-login-text">Masuk</span>
             </button>
         </div>
     </nav>
@@ -42,13 +41,14 @@
                                 src="images/profile.png" 
                                 alt="Vahira Nurfitria" 
                                 class="avatar-img"
+                                onerror="this.src='https://via.placeholder.com/384?text=Vahira'"
                             />
                         </div>
                     </div>
                     
-                    <div class="order-1 md:order-2" style="display: flex; flex-direction: column; gap: 1.5rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; color: rgba(191, 161, 129, 0.6); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5em; font-weight: bold;">
-                            <span style="width: 3rem; height: 1px; background: rgba(191, 161, 129, 0.2);"></span>
+                    <div class="order-1 md:order-2 hero-content">
+                        <div class="hero-badge">
+                            <span class="hero-badge-line"></span>
                             Pengembang Web
                         </div>
                         
@@ -57,15 +57,15 @@
                             <span class="accent-text">Nurfitria.</span>
                         </h1>
                         
-                        <p style="max-width: 36rem; font-size: 1.125rem; font-weight: 300; line-height: 1.6;">
+                        <p class="hero-description">
                             Saya adalah Pengembang Web Full-stack yang berfokus menciptakan aplikasi web yang bersih dan ramah pengguna. Saya menjembatani kesenjangan antara fungsi teknis dan desain estetika.
                         </p>
 
-                        <div style="padding-top: 2rem; display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
+                        <div class="hero-actions">
                             <a href="#projects" class="btn-primary">
                                 Portofolio
                             </a>
-                            <div style="display: flex; gap: 1rem;">
+                            <div class="hero-social">
                                 <a href="https://github.com/paiipear" target="_blank" class="social-circle">
                                     <i class="fab fa-github" style="font-size: 20px;"></i>
                                 </a>
@@ -85,13 +85,13 @@
         <!-- About Section -->
         <section id="about" class="section-about">
             <div class="max-w-4xl">
-                <div style="text-align: center; display: flex; flex-direction: column; gap: 3rem;">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.5em; color: rgba(191, 161, 129, 0.6); font-weight: bold;">Biografi</span>
-                        <h2 style="font-size: 3rem; font-family: var(--font-display); font-style: italic; text-transform: uppercase; letter-spacing: -0.05em;">Siapa Saya?</h2>
+                <div class="about-container">
+                    <div class="about-header">
+                        <span class="section-badge">Biografi</span>
+                        <h2 class="section-title">Siapa Saya?</h2>
                     </div>
                     
-                    <div style="display: flex; flex-direction: column; gap: 2rem; font-size: 1.25rem; font-weight: 300;">
+                    <div class="about-text">
                         <p>
                             Saya adalah lulusan SMK Negeri 1 Depok jurusan Pengembangan Perangkat Lunak dan Gim dengan pengalaman dalam pengembangan website dan pengelolaan sistem digital.
                         </p>
@@ -106,32 +106,30 @@
         <!-- Experience Section -->
         <section class="py-40 px-6">
             <div class="max-w-7xl">
-                <div style="text-align: center; margin-bottom: 6rem; display: flex; flex-direction: column; gap: 1rem;">
-                    <span style="color: rgba(191, 161, 129, 0.6); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5em; font-weight: bold;">Perjalanan Karir</span>
-                    <h2 style="font-size: 3.75rem; font-family: var(--font-display); font-style: italic; text-transform: uppercase; letter-spacing: -0.05em;">Pengalaman Magang</h2>
+                <div class="section-header">
+                    <span class="section-badge">Perjalanan Karir</span>
+                    <h2 class="section-title">Pengalaman Magang</h2>
                 </div>
 
                 <div class="card">
-                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-                            <div>
-                                <h3 style="font-size: 2.25rem; font-family: var(--font-display); font-style: italic;">PT Mafi Global Asia</h3>
-                                <p style="color: rgba(191, 161, 129, 0.6); font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">Digital Support Intern</p>
-                            </div>
-                            <span style="padding: 0.5rem 1.5rem; background: rgba(191, 161, 129, 0.05); border: 1px solid rgba(191, 161, 129, 0.1); border-radius: 9999px; font-size: 10px; font-weight: bold; color: rgba(191, 161, 129, 0.6);">2025 - 2026</span>
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>PT Mafi Global Asia</h3>
+                            <p class="experience-subtitle">Digital Support Intern</p>
                         </div>
+                        <span class="experience-date">2025 - 2026</span>
                     </div>
-                    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; list-style: none;">
-                        <li style="display: flex; gap: 1rem; font-size: 0.875rem; font-weight: 300;">
-                            <span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(191, 161, 129, 0.3); margin-top: 0.5rem; flex-shrink: 0;"></span>
+                    <ul class="experience-list">
+                        <li>
+                            <span class="list-dot"></span>
                             Membantu pengembangan landing page dan website berbasis WordPress untuk branding dan promosi.
                         </li>
-                        <li style="display: flex; gap: 1rem; font-size: 0.875rem; font-weight: 300;">
-                            <span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(191, 161, 129, 0.3); margin-top: 0.5rem; flex-shrink: 0;"></span>
+                        <li>
+                            <span class="list-dot"></span>
                             Membantu pembuatan chatbot customer service untuk mempermudah komunikasi dengan pelanggan.
                         </li>
-                        <li style="display: flex; gap: 1rem; font-size: 0.875rem; font-weight: 300;">
-                            <span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(191, 161, 129, 0.3); margin-top: 0.5rem; flex-shrink: 0;"></span>
+                        <li>
+                            <span class="list-dot"></span>
                             Melakukan pengelolaan dan optimasi dasar website termasuk konten, struktur, dan SEO.
                         </li>
                     </ul>
@@ -142,44 +140,44 @@
         <!-- Services Section -->
         <section id="action" class="py-40 px-6">
             <div class="max-w-7xl">
-                <div style="text-align: center; margin-bottom: 6rem; display: flex; flex-direction: column; gap: 1rem;">
-                    <span style="color: rgba(191, 161, 129, 0.6); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5em; font-weight: bold;">Solusi</span>
-                    <h2 style="font-size: 3.75rem; font-family: var(--font-display); font-style: italic; text-transform: uppercase; letter-spacing: -0.05em;">Layanan</h2>
+                <div class="section-header">
+                    <span class="section-badge">Solusi</span>
+                    <h2 class="section-title">Layanan</h2>
                 </div>
 
-                <div class="grid md-grid-3 gap-10">
-                    <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                        <div style="width: 5rem; height: 5rem; background: rgba(191, 161, 129, 0.05); border-radius: 1.5rem; display: flex; align-items: center; justify-content: center; color: var(--color-accent);">
-                            <i class="fas fa-code" style="font-size: 32px;"></i>
+                <div class="services-grid">
+                    <div class="card service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
                         </div>
-                        <h4 style="font-size: 1.875rem; font-family: var(--font-display); font-style: italic; text-transform: uppercase; letter-spacing: -0.025em;">Pemrograman Web</h4>
-                        <p style="font-weight: 300;">Membangun website interaktif dan dinamis menggunakan HTML, CSS, JavaScript, PHP, dan WordPress.</p>
+                        <h4>Pemrograman Web</h4>
+                        <p>Membangun website interaktif dan dinamis menggunakan HTML, CSS, JavaScript, PHP, dan WordPress.</p>
                     </div>
-                    <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                        <div style="width: 5rem; height: 5rem; background: rgba(191, 161, 129, 0.05); border-radius: 1.5rem; display: flex; align-items: center; justify-content: center; color: var(--color-accent);">
-                            <i class="fas fa-robot" style="font-size: 32px;"></i>
+                    <div class="card service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
                         </div>
-                        <h4 style="font-size: 1.875rem; font-family: var(--font-display); font-style: italic; text-transform: uppercase; letter-spacing: -0.025em;">AI Automation</h4>
-                        <p style="font-weight: 300;">Mengembangkan alur kerja otomatisasi menggunakan N8N dan membangun chatbot customer service yang cerdas.</p>
+                        <h4>AI Automation</h4>
+                        <p>Mengembangkan alur kerja otomatisasi menggunakan N8N dan membangun chatbot customer service yang cerdas.</p>
                     </div>
-                    <div class="card" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                        <div style="width: 5rem; height: 5rem; background: rgba(191, 161, 129, 0.05); border-radius: 1.5rem; display: flex; align-items: center; justify-content: center; color: var(--color-accent);">
-                            <i class="fas fa-paint-brush" style="font-size: 32px;"></i>
+                    <div class="card service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
                         </div>
-                        <h4 style="font-size: 1.875rem; font-family: var(--font-display); font-style: italic; text-transform: uppercase; letter-spacing: -0.025em;">Desain UI/UX</h4>
-                        <p style="font-weight: 300;">Menciptakan antarmuka pengguna yang estetis dan fungsional menggunakan Figma dan Canva.</p>
+                        <h4>Desain UI/UX</h4>
+                        <p>Menciptakan antarmuka pengguna yang estetis dan fungsional menggunakan Figma dan Canva.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Portfolio Section -->
-        <section id="projects" class="py-40 px-6" style="background: rgba(28, 31, 38, 0.05);">
+        <section id="projects" class="py-40 px-6 portfolio-section">
             <div class="max-w-7xl text-center">
-                <div style="margin-bottom: 6rem; display: flex; flex-direction: column; gap: 2rem;">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <span style="color: rgba(191, 161, 129, 0.6); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5em; font-weight: bold;">Galeri Karya</span>
-                        <h2 style="font-size: 3.75rem; font-family: var(--font-display); font-style: italic; text-transform: uppercase; letter-spacing: -0.05em;">Portofolio</h2>
+                <div class="portfolio-header">
+                    <div class="portfolio-title-wrap">
+                        <span class="section-badge">Galeri Karya</span>
+                        <h2 class="section-title">Portofolio</h2>
                     </div>
                     
                     <div class="filter-buttons">
@@ -190,36 +188,35 @@
                 </div>
 
                 <div id="portfolio-grid">
-                    <div style="display: flex; justify-content: center; align-items: center; height: 10rem;">
-                        <div style="width: 3rem; height: 3rem; border: 2px solid rgba(191, 161, 129, 0.1); border-top-color: var(--color-accent); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                    <div class="loading-spinner">
+                        <div class="spinner"></div>
                     </div>
-                    <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-40 px-6" style="border-top: 1px solid rgba(226, 226, 226, 0.1);">
+        <section id="contact" class="py-40 px-6 contact-section">
             <div class="max-w-4xl contact-container">
-                <div style="flex: 1; display: flex; flex-direction: column; gap: 3rem;">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <span style="color: rgba(191, 161, 129, 0.6); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5em; font-weight: bold;">Mari Terhubung</span>
-                        <h3 style="font-size: 4.5rem; font-family: var(--font-display); font-style: italic; line-height: 0.8; text-transform: uppercase; letter-spacing: -0.05em;">Tetap <br /> <span style="color: var(--color-accent); opacity: 0.5; font-style: normal;">Terinspirasi.</span></h3>
+                <div class="contact-info">
+                    <div class="contact-header">
+                        <span class="section-badge">Mari Terhubung</span>
+                        <h3>Tetap <br /> <span>Terinspirasi.</span></h3>
                     </div>
-                    <p style="font-size: 1.125rem; font-weight: 300;">
+                    <p class="contact-description">
                         Seorang Pengembang Web Fullstack yang membangun aspek Frontend dan Backend Website serta Aplikasi Web untuk memastikan kesuksesan produk secara keseluruhan.
                     </p>
-                    <div style="display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start;">
-                        <a href="mailto:vahira.nurfitriaa@gmail.com" style="display: flex; align-items: center; gap: 1rem; font-size: 1.25rem; color: var(--color-secondary); text-decoration: none; font-family: var(--font-display); font-style: italic; transition: color 0.3s;">
-                            <span style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(226, 226, 226, 0.1); border-radius: 50%;">
-                                <i class="far fa-envelope" style="font-size: 16px;"></i>
+                    <div class="contact-details">
+                        <a href="mailto:vahira.nurfitriaa@gmail.com" class="contact-email">
+                            <span class="contact-icon">
+                                <i class="far fa-envelope"></i>
                             </span>
                             vahira.nurfitriaa@gmail.com
                         </a>
-                        <div style="display: flex; gap: 2rem; margin-top: 1rem;">
-                            <a href="https://github.com/paiipear" target="_blank" style="color: rgba(226, 226, 226, 0.4); text-decoration: none; transition: all 0.3s;"><i class="fab fa-github" style="font-size: 24px;"></i></a>
-                            <a href="#" style="color: rgba(226, 226, 226, 0.4); text-decoration: none; transition: all 0.3s;"><i class="fab fa-linkedin" style="font-size: 24px;"></i></a>
-                            <a href="#" style="color: rgba(226, 226, 226, 0.4); text-decoration: none; transition: all 0.3s;"><i class="fab fa-instagram" style="font-size: 24px;"></i></a>
+                        <div class="contact-social">
+                            <a href="https://github.com/paiipear" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -233,19 +230,19 @@
                         <label class="form-label">Pesan</label>
                         <textarea class="form-textarea" placeholder="Ceritakan tentang proyek Anda..."></textarea>
                     </div>
-                    <button style="width: 100%; padding: 1.25rem; background: var(--color-accent); color: var(--color-primary); border: none; border-radius: 9999px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; cursor: pointer; box-shadow: 0 20px 25px -5px rgba(191, 161, 129, 0.2); transition: all 0.3s;">Kirim Pesan</button>
+                    <button class="submit-btn">Kirim Pesan</button>
                 </form>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer style="padding: 5rem 1.5rem; border-top: 1px solid rgba(226, 226, 226, 0.1); background: rgba(28, 31, 38, 0.4);">
-        <div class="max-w-7xl" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; gap: 2.5rem;">
-            <div class="logo" style="font-size: 1.5rem;"> <span style="color: white;">Vahira</span> Nurfitria.</div>
-            <p style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.3em; color: rgba(226, 226, 226, 0.4); font-weight: bold;">© 2026 Vahira Nurfitria. HAK CIPTA DILINDUNGI.</p>
-            <div style="display: flex; gap: 0.5rem; align-items: center; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: bold; color: rgba(226, 226, 226, 0.6);">
-                <div style="width: 6px; height: 6px; border-radius: 50%; background: #34d399; box-shadow: 0 0 8px rgba(52, 211, 153, 0.5);"></div>
+    <footer class="footer">
+        <div class="max-w-7xl footer-container">
+            <div class="logo footer-logo"> <span style="color: white;">Vahira</span> Nurfitria.</div>
+            <p class="footer-copyright">© 2026 Vahira Nurfitria. HAK CIPTA DILINDUNGI.</p>
+            <div class="footer-status">
+                <div class="status-dot"></div>
                 Aktif Berkolaborasi
             </div>
         </div>
@@ -256,7 +253,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Selamat Datang Kembali!</h4>
-                <button id="closeLogin" class="modal-close"><i class="fas fa-times" style="font-size: 20px;"></i></button>
+                <button id="closeLogin" class="modal-close"><i class="fas fa-times"></i></button>
             </div>
             <form class="modal-form" onsubmit="event.preventDefault();">
                 <div class="form-group">
@@ -267,11 +264,12 @@
                     <label class="form-label">Kata Sandi</label>
                     <input type="password" class="form-input" placeholder="••••••••" />
                 </div>
-                <button class="btn-primary w-full" style="padding: 1.25rem; border: none; cursor: pointer;">Masuk Sekarang</button>
+                <button class="btn-primary modal-submit">Masuk Sekarang</button>
             </form>
             <p class="modal-link">Belum punya akun? <span>Daftar</span></p>
         </div>
     </div>
-    <script src="src/main.js"></script>
+    
+    <script src="/src/main.js"></script>
 </body>
 </html>

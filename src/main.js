@@ -74,7 +74,7 @@
             // Copy Email Functionality
             const copyBtn = document.getElementById('copyEmail');
             const tooltip = document.getElementById('copyTooltip');
-            const email = "vahiranurfitria7@gmail.com";
+            const email = "vahira.nurfitriaa@gmail.com";
 
             if (copyBtn) {
                 copyBtn.addEventListener('click', (e) => {
