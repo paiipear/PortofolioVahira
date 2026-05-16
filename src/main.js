@@ -17,6 +17,8 @@
             { title: "Training", desc: "Optimasi Media Sosial DEA DTS 2025", image: "/images/VAHIRA_NURFITRIA_digitalentSertif_Social_Oportu.png" },
             { title: "Generative AI Workshop", desc: "AI Generatif yang Bertanggung Jawab di SMK Negeri 1 Depok", image: "/images/generativeai.jpeg" },
             { title: "Build With AI Event", desc: "Memberdayakan inovasi melalui pengalaman AI langsung", image: "/images/buildwithai.jpeg" },
+            { title: "Pengalaman Project Al-Ishmah Islamic School & MGA", desc: "Berkontribusi dalam proses perencanaa, pelaksanaan, hingga penyelesaian", image: "/images/sertifikatmagangmafi1.png" },
+            { title: "Program Magang di PT.Mafi Global Asia", desc: "Program Praktik kerja lapangan(PKL)/Magang di Pt.Mafi Global Asia", image: "/images/sertifikatmagangmafi2.png" },
         ];
 
         let repos = [];

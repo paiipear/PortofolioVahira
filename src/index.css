@@ -1,4 +1,4 @@
-/* SEMUA CSS ANDA TETAP SAMA PERSIS + PERBAIKAN MOBILE */
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
@@ -16,9 +16,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden !important;
+    width: 100%;
 }
 
 body {
@@ -26,7 +27,18 @@ body {
     color: var(--color-secondary);
     font-family: var(--font-sans);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    width: 100%;
+    position: relative;
+}
+
+img, video, iframe, .avatar-img, .hero-glow {
+    max-width: 100%;
+    height: auto;
+}
+
+.max-w-7xl, .max-w-4xl, .container, section, .navbar, footer, .hero, .contact-container {
+    overflow-x: hidden !important;
 }
 
 ::selection {
@@ -63,14 +75,12 @@ body {
 .py-40 { padding-top: 8rem; padding-bottom: 8rem; }
 .pt-40 { padding-top: 10rem; }
 
-/* ========== PERBAIKAN MOBILE ========== */
 @media (max-width: 768px) {
     .py-40 { padding-top: 4rem; padding-bottom: 4rem; }
     .pt-40 { padding-top: 7rem; }
     .px-6 { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
 
-/* Navbar Mobile */
 .navbar {
     position: fixed;
     top: 0;
@@ -82,6 +92,7 @@ body {
     height: 5rem;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .nav-container {
@@ -101,7 +112,7 @@ body {
 
 @media (max-width: 768px) {
     .logo {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         white-space: nowrap;
     }
     .btn-login-text {
@@ -155,12 +166,12 @@ body {
     color: var(--color-primary);
 }
 
-/* Hero Section Mobile */
 .hero {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .hero-glow {
@@ -169,6 +180,8 @@ body {
     right: 0;
     width: 50vw;
     height: 50vw;
+    max-width: 400px;
+    max-height: 400px;
     background: rgba(191, 161, 129, 0.05);
     border-radius: 50%;
     filter: blur(120px);
@@ -181,6 +194,7 @@ body {
     gap: 3rem;
     align-items: center;
     padding-bottom: 5rem;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -376,6 +390,7 @@ body {
     border-top: 1px solid rgba(226, 226, 226, 0.05);
     border-bottom: 1px solid rgba(226, 226, 226, 0.05);
     background: rgba(28, 31, 38, 0.2);
+    overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -454,6 +469,8 @@ body {
     border: 1px solid rgba(226, 226, 226, 0.05);
     border-radius: 2rem;
     transition: all 0.3s;
+    overflow-x: hidden;
+    word-wrap: break-word;
 }
 
 @media (min-width: 768px) {
@@ -614,6 +631,7 @@ body {
 /* Portfolio Section Mobile */
 .portfolio-section {
     background: rgba(28, 31, 38, 0.05);
+    overflow-x: hidden;
 }
 
 .portfolio-header {
@@ -681,7 +699,13 @@ body {
 
 .filter-btn.inactive:hover { background: rgba(28, 31, 38, 0.8); }
 
-#portfolio-grid { min-height: 400px; display: grid; gap: 2rem; transition: opacity 0.3s ease; }
+#portfolio-grid { 
+    min-height: 400px; 
+    display: grid; 
+    gap: 2rem; 
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
 
 @media (min-width: 768px) {
     #portfolio-grid { gap: 2.5rem; }
@@ -716,6 +740,8 @@ body {
     justify-content: space-between;
     height: 100%;
     transition: all 0.3s;
+    overflow-x: hidden;
+    word-wrap: break-word;
 }
 
 @media (min-width: 768px) {
@@ -751,6 +777,7 @@ body {
 /* Contact Section Mobile */
 .contact-section {
     border-top: 1px solid rgba(226, 226, 226, 0.1);
+    overflow-x: hidden;
 }
 
 .contact-container {
@@ -758,6 +785,7 @@ body {
     flex-direction: column;
     gap: 3rem;
     align-items: center;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -830,13 +858,15 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--color-secondary);
     text-decoration: none;
     font-family: var(--font-display);
     font-style: italic;
     transition: color 0.3s;
     word-break: break-all;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -893,6 +923,7 @@ body {
     background: rgba(28, 31, 38, 0.2);
     border: 1px solid rgba(226, 226, 226, 0.1);
     border-radius: 1.5rem;
+    overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -931,6 +962,7 @@ body {
     font-size: 0.85rem;
     outline: none;
     transition: border-color 0.3s;
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -979,6 +1011,7 @@ body {
     padding: 3rem 1.5rem;
     border-top: 1px solid rgba(226, 226, 226, 0.1);
     background: rgba(28, 31, 38, 0.4);
+    overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -993,6 +1026,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -1142,7 +1176,6 @@ body {
 
 .modal-link span { color: var(--color-accent); cursor: pointer; }
 
-/* Utility Classes */
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .justify-between { justify-content: space-between; }
@@ -1158,7 +1191,6 @@ body {
 @media (min-width: 768px) {
     .md\:order-1 { order: 1; }
     .md\:order-2 { order: 2; }
-    .justify-start { justify-content: flex-start; }
 }
 
 .hidden-mobile {
